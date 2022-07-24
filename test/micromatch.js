@@ -1,8 +1,7 @@
-'use strict';
 
 const assert = require('assert');
 const path = require('path');
-const mm = require('..');
+const mm = require('../src');
 const sep = path.sep;
 
 describe('micromatch', () => {

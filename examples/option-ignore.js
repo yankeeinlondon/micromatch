@@ -1,6 +1,5 @@
-'use strict';
 
-const micromatch = require('..');
+const micromatch = require('../src');
 
 const isMatch = micromatch.matcher('*', { ignore: 'f*' });
 console.log(isMatch('foo')); //=> false

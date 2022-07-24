@@ -1,9 +1,8 @@
-'use strict';
 
 require('mocha');
 const version = process.version;
 const assert = require('assert');
-const mm = require('..');
+const mm = require('../src');
 
 describe('regex features', () => {
 

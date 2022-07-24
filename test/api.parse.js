@@ -1,7 +1,6 @@
-'use strict';
 
 const assert = require('assert');
-const mm = require('..');
+const mm = require('../src');
 
 describe('.parse()', () => {
   it('should parse a glob', function() {

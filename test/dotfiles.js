@@ -1,9 +1,8 @@
-'use strict';
 
 require('mocha');
 const assert = require('assert');
 const mi = require('minimatch');
-const mm = require('..');
+const mm = require('../src');
 const { isMatch } = mm;
 
 describe('dotfiles', () => {

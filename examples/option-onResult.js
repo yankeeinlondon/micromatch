@@ -1,6 +1,5 @@
-'use strict';
 
-const micromatch = require('..');
+const micromatch = require('../src');
 
 const onResult = ({ glob, regex, input, output }) => {
   console.log({ input, output });

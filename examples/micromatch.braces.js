@@ -1,6 +1,5 @@
-'use strict';
 
-const { braces } = require('..');
+const { braces } = require('../src');
 
 console.log(braces('foo/{a,b,c}/bar'));
 //=> [ 'foo/(a|b|c)/bar' ]

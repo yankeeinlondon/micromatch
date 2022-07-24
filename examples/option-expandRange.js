@@ -1,7 +1,6 @@
-'use strict';
 
 const fill = require('fill-range');
-const micromatch = require('..');
+const micromatch = require('../src');
 const regex = micromatch.makeRe('foo/{01..25}/bar', {
   expandRange(a, b) {
     return `(${fill(a, b, { toRegex: true })})`;

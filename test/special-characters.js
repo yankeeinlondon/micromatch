@@ -1,10 +1,9 @@
-'use strict';
 
 require('mocha');
 const path = require('path');
 const assert = require('assert');
 const isWindows = () => process.platform === 'win32' || path.sep === '\\';
-const mm = require('..');
+const mm = require('../src');
 const { isMatch, makeRe } = mm;
 
 if (!process.env.ORIGINAL_PATH_SEP) {

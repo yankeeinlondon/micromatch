@@ -1,9 +1,8 @@
-'use strict';
 
 require('mocha');
 const path = require('path');
 const assert = require('assert');
-const mm = require('..');
+const mm = require('../src');
 
 const isWindows = () => process.platform === 'win32' || path.sep === '\\';
 const format = str => str.replace(/\\/g, '/').replace(/^\.\//, '');

@@ -1,11 +1,10 @@
-'use strict';
 
 process.env.PICOMATCH_NO_CACHE = 'true';
 
 require('mocha');
 const path = require('path');
 const assert = require('assert');
-const { all } = require('..');
+const { all } = require('../src');
 
 if (!process.env.ORIGINAL_PATH_SEP) {
   process.env.ORIGINAL_PATH_SEP = path.sep;

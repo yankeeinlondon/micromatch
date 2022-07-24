@@ -1,7 +1,6 @@
-'use strict';
 
 const assert = require('assert');
-const mm = require('..');
+const mm = require('../src');
 
 describe('.matchKeys()', () => {
   describe('error handling', () => {

@@ -1,9 +1,8 @@
-'use strict';
 
 const path = require('path');
 const sep = path.sep;
 const assert = require('assert');
-const { not } = require('..');
+const { not } = require('../src');
 
 describe('.not()', () => {
   beforeEach(() => {

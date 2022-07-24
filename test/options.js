@@ -1,8 +1,7 @@
-'use strict';
 
 const path = require('path');
 const assert = require('assert');
-const mm = require('..');
+const mm = require('../src');
 const mi = require('minimatch');
 
 if (!process.env.ORIGINAL_PATH_SEP) {

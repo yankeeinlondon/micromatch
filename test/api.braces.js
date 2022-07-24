@@ -1,8 +1,7 @@
-'use strict';
 
 require('mocha');
 const assert = require('assert');
-const { braces } = require('..');
+const { braces } = require('../src');
 
 if (!process.env.ORIGINAL_PATH_SEP) {
   process.env.ORIGINAL_PATH_SEP = path.sep

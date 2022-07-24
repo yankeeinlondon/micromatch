@@ -1,6 +1,5 @@
-'use strict';
 
-const micromatch = require('..');
+const micromatch = require('../src');
 
 const onIgnore = ({ glob, regex, input, output }) => {
   console.log({ glob, regex, input, output });

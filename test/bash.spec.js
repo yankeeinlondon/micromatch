@@ -1,10 +1,9 @@
-'use strict';
 
 require('mocha');
 const path = require('path');
 const util = require('util');
 const assert = require('assert');
-const { isMatch } = require('..');
+const { isMatch } = require('../src');
 let units = [];
 
 describe('bash.spec', () => {

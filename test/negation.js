@@ -1,10 +1,9 @@
-'use strict';
 
 const path = require('path');
 const sep = path.sep;
 const assert = require('assert');
 const isWindows = () => process.platform === 'win32' || path.sep === '\\';
-const mm = require('..');
+const mm = require('../src');
 
 describe('negation', () => {
   describe('posix paths', () => {

@@ -1,8 +1,7 @@
-'use strict';
 
 require('mocha');
 const assert = require('assert');
-const mm = require('..');
+const mm = require('../src');
 const opts = { strictSlashes: true, posix: true };
 
 const isMatch = (...args) => {

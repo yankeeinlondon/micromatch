@@ -1,9 +1,7 @@
-'use strict';
+import util from 'util';
+import braces from 'braces';
+import picomatch, {utils} from 'picomatch';
 
-const util = require('util');
-const braces = require('braces');
-const picomatch = require('picomatch');
-const utils = require('picomatch/lib/utils');
 const isEmptyString = val => val === '' || val === './';
 
 /**
@@ -464,4 +462,4 @@ micromatch.braceExpand = (pattern, options) => {
  * Expose micromatch
  */
 
-module.exports = micromatch;
+export default micromatch

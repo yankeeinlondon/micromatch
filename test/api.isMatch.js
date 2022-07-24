@@ -1,7 +1,6 @@
-'use strict';
 
 const assert = require('assert');
-const { isMatch, any } = require('..');
+const { isMatch, any } = require('../src');
 
 describe('.isMatch():', () => {
   describe('error handling:', () => {

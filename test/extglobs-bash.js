@@ -1,9 +1,8 @@
-'use strict';
 
 require('mocha');
 const path = require('path');
 const assert = require('assert');
-const { isMatch, makeRe } = require('..');
+const { isMatch, makeRe } = require('../src');
 
 if (!process.env.ORIGINAL_PATH_SEP) {
   process.env.ORIGINAL_PATH_SEP = path.sep

@@ -1,7 +1,6 @@
-'use strict';
 
 const assert = require('assert');
-const { capture } = require('..');
+const { capture } = require('../src');
 
 describe('.capture()', () => {
   it('should return null if no match', () => {
