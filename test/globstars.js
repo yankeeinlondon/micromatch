@@ -1,8 +1,8 @@
 
-require('mocha');
-const assert = require('assert');
-const mm = require('../src');
-const { isMatch } = require('../src');
+// require('mocha');
+import assert from 'assert';
+import mm from '../src/index.js';
+const {all} = mm;
 
 describe('globstars - "**"', () => {
 

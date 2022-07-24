@@ -1,6 +1,6 @@
 
-const assert = require('assert');
-const mm = require('../src');
+import assert from 'assert';
+import mm from '../src/index.js';
 
 const optimize = (pattern, options) => {
   return mm.braces(pattern, Object.assign({ optimize: true }, options));

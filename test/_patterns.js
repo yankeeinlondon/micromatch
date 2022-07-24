@@ -1,5 +1,5 @@
 
-module.exports = [
+export const patterns = [
   '!**',
   '!**/*',
   '!**/*.md',
@@ -88,7 +88,7 @@ module.exports = [
   'a/b/c/*.js'
 ];
 
-module.exports.other = [
+export const other = [
   'code/{for,while,*-{test,exec}}*.js',
   'code/{for-*,while*}.js',
   '**/a/*/b/c/.js',

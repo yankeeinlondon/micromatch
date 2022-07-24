@@ -1,7 +1,7 @@
 
-const path = require('path');
-const assert = require('assert');
-const mm = require('../src');
+import path from 'path';
+import assert from 'assert';
+import mm from '../src/index.js';
 const sep = path.sep;
 
 describe('.matcher()', () => {

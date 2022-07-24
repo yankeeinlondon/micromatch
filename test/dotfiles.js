@@ -1,8 +1,7 @@
 
-require('mocha');
-const assert = require('assert');
-const mi = require('minimatch');
-const mm = require('../src');
+// require('mocha');
+import assert from 'assert';
+import mm from '../src/index.js';
 const { isMatch } = mm;
 
 describe('dotfiles', () => {

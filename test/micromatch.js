@@ -1,7 +1,7 @@
 
-const assert = require('assert');
-const path = require('path');
-const mm = require('../src');
+import assert from 'assert';
+import path from 'path';
+import mm from '../src/index.js';
 const sep = path.sep;
 
 describe('micromatch', () => {

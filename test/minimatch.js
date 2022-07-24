@@ -1,9 +1,9 @@
+import path from 'path';
+import assert from 'assert';
+import patterns from './fixtures/patterns.js';
+import mm from '../src/index.js';
 
-const path = require('path');
-const assert = require('assert');
 const isWindows = () => process.platform === 'win32' || path.sep === '\\';
-const patterns = require('./fixtures/patterns');
-const mm = require('../src');
 let sep = path.sep;
 
 /**

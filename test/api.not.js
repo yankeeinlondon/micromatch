@@ -1,8 +1,9 @@
 
-const path = require('path');
+import path from 'path';
 const sep = path.sep;
-const assert = require('assert');
-const { not } = require('../src');
+import assert from 'assert';
+import mm from '../src/index.js';
+const {not} = mm;
 
 describe('.not()', () => {
   beforeEach(() => {

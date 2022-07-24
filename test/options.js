@@ -1,8 +1,8 @@
 
-const path = require('path');
-const assert = require('assert');
-const mm = require('../src');
-const mi = require('minimatch');
+import path from 'path';
+import assert from 'assert';
+import mm from '../src/index.js';
+import mi from 'minimatch';
 
 if (!process.env.ORIGINAL_PATH_SEP) {
   process.env.ORIGINAL_PATH_SEP = path.sep

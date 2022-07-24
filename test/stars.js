@@ -1,7 +1,8 @@
 
-require('mocha');
-const assert = require('assert');
-const { isMatch } = require('../src');
+// // require('mocha');
+import assert from 'assert';
+import mm from '../src/index.js';
+const {isMatch} = mm;
 
 describe('stars', () => {
   describe('single stars', () => {

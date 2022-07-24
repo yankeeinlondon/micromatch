@@ -1,6 +1,7 @@
 
-const assert = require('assert');
-const mm = require('../src');
+import assert from 'assert';
+import mm from '../src/index.js';
+const {all} = mm;
 
 describe('.makeRe()', () => {
   it('should throw an error when value is not a string', () => {

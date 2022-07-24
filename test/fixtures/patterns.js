@@ -8,7 +8,7 @@
 let fixtures = ['a', 'b', 'c', 'd', 'abc', 'abd', 'abe', 'bb', 'bcd', 'ca', 'cb', 'dd', 'de', 'bdir/', 'bdir/cfile'];
 
 // pattern | expected | options | fixtures
-module.exports = [
+export default [
   'http://www.bashcookbook.com/bashinfo/source/bash-1.14.7/tests/glob-test',
   ['a*', ['a', 'abc', 'abd', 'abe']],
   ['X*', ['X*'], {nonull: true}],
@@ -262,9 +262,3 @@ module.exports = [
   ['a/[2015-03-10T00:23:08.647Z]/z', []],
   ['[a-0][a-\u0100]', []]
 ];
-
-Object.defineProperty(module.exports, 'fixtures', {
-  get: () => {
-    return fixtures;
-  }
-});

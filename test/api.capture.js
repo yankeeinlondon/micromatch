@@ -1,6 +1,7 @@
 
-const assert = require('assert');
-const { capture } = require('../src');
+import assert from 'assert';
+import mm from '../src/index.js';
+const {capture} = mm;
 
 describe('.capture()', () => {
   it('should return null if no match', () => {

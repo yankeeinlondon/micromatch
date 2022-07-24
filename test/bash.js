@@ -1,8 +1,8 @@
 
-require('mocha');
-const path = require('path');
-const assert = require('assert');
-const mm = require('../src');
+// require('mocha');
+import path from 'path';
+import assert from 'assert';
+import mm from '../src/index.js';
 
 const isWindows = () => process.platform === 'win32' || path.sep === '\\';
 const format = str => str.replace(/\\/g, '/').replace(/^\.\//, '');

@@ -1,7 +1,8 @@
 
-require('mocha');
-const assert = require('assert');
-const { braces } = require('../src');
+// require('mocha');
+import assert from 'assert';
+import mm from '../src/index.js';
+const {braces} = mm;
 
 if (!process.env.ORIGINAL_PATH_SEP) {
   process.env.ORIGINAL_PATH_SEP = path.sep

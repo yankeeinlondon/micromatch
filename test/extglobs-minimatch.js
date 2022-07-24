@@ -1,8 +1,9 @@
 
-require('mocha');
-const path = require('path');
-const assert = require('assert');
-const { isMatch, makeRe } = require('../src');
+// require('mocha');
+import path from 'path';
+import assert from 'assert';
+import mm from '../src/index.js';
+const {isMatch} = mm;
 
 if (!process.env.ORIGINAL_PATH_SEP) {
   process.env.ORIGINAL_PATH_SEP = path.sep

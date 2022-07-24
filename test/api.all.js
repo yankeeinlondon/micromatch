@@ -1,10 +1,11 @@
 
 process.env.PICOMATCH_NO_CACHE = 'true';
 
-require('mocha');
-const path = require('path');
-const assert = require('assert');
-const { all } = require('../src');
+// require('mocha');
+import path from 'path';
+import assert from 'assert';
+import mm from '../src/index.js';
+const {all} = mm;
 
 if (!process.env.ORIGINAL_PATH_SEP) {
   process.env.ORIGINAL_PATH_SEP = path.sep;

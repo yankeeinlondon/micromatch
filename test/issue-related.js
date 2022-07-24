@@ -1,6 +1,6 @@
 
-const assert = require('assert');
-const mm = require('../src');
+import assert from 'assert';
+import mm from '../src/index.js';
 
 describe('issue-related tests', () => {
   it('micromatch issue #140', () => {

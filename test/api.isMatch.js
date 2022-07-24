@@ -1,6 +1,7 @@
 
-const assert = require('assert');
-const { isMatch, any } = require('../src');
+import assert from 'assert';
+import mm from '../src/index.js';
+const {isMatch, any} = mm;
 
 describe('.isMatch():', () => {
   describe('error handling:', () => {

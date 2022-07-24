@@ -1,10 +1,10 @@
+// // require('mocha');
+import path from 'path';
+import assert from 'assert';
+import mm from '../src/index.js';
 
-require('mocha');
-const path = require('path');
-const assert = require('assert');
 const isWindows = () => process.platform === 'win32' || path.sep === '\\';
-const mm = require('../src');
-const { isMatch, makeRe } = mm;
+const { isMatch } = mm;
 
 if (!process.env.ORIGINAL_PATH_SEP) {
   process.env.ORIGINAL_PATH_SEP = path.sep;

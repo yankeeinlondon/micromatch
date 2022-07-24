@@ -1,11 +1,11 @@
 
-const path = require('path');
+import path from 'path';
 
 if (!process.env.ORIGINAL_PATH_SEP) {
   process.env.ORIGINAL_PATH_SEP = path.sep
 }
 
-module.exports = [
+export const fixtures = [
   'a',
   'a.md',
   'a.js',

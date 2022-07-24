@@ -1,9 +1,8 @@
-
-const path = require('path');
+import path from 'path';
+import assert from 'assert';
+import mm from '../src/index.js';
 const sep = path.sep;
-const assert = require('assert');
 const isWindows = () => process.platform === 'win32' || path.sep === '\\';
-const mm = require('../src');
 
 describe('negation', () => {
   describe('posix paths', () => {

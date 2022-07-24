@@ -1,9 +1,8 @@
 
-require('mocha');
-const path = require('path');
-const util = require('util');
-const assert = require('assert');
-const { isMatch } = require('../src');
+// require('mocha');
+import assert from 'assert';
+import mm from '../src/index.js';
+const {isMatch} = mm;
 let units = [];
 
 describe('bash.spec', () => {
