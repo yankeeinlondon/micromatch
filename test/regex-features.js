@@ -1,5 +1,5 @@
 
-// require('mocha');
+import 'mocha';
 const version = process.version;
 import assert from 'assert';
 import mm from '../src/index.js';

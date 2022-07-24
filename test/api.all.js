@@ -1,7 +1,7 @@
 
 process.env.PICOMATCH_NO_CACHE = 'true';
 
-// require('mocha');
+import 'mocha';
 import path from 'path';
 import assert from 'assert';
 import mm from '../src/index.js';

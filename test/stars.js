@@ -1,5 +1,4 @@
-
-// // require('mocha');
+import 'mocha';
 import assert from 'assert';
 import mm from '../src/index.js';
 const {isMatch} = mm;
