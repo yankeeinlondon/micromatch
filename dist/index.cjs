@@ -46,7 +46,10 @@ var __toCommonJS = /* @__PURE__ */ ((cache) => {
 // src/index.js
 var src_exports = {};
 __export(src_exports, {
-  default: () => src_default
+  braceExpand: () => braceExpand,
+  braces: () => braces,
+  default: () => src_default,
+  parse: () => parse
 });
 var import_util = __toESM(require("util"), 1);
 var import_braces = __toESM(require("braces"), 1);
@@ -179,16 +182,17 @@ micromatch.capture = (glob, input, options) => {
 };
 micromatch.makeRe = (...args) => import_picomatch.default.makeRe(...args);
 micromatch.scan = (...args) => import_picomatch.default.scan(...args);
-micromatch.parse = (patterns, options) => {
+var parse = (patterns, options) => {
   let res = [];
   for (let pattern of [].concat(patterns || [])) {
-    for (let str of (0, import_braces.default)(String(pattern), options)) {
+    for (let str of braces(String(pattern), options)) {
       res.push(import_picomatch.default.parse(str, options));
     }
   }
   return res;
 };
-micromatch.braces = (pattern, options) => {
+micromatch.parse = parse;
+var braces = (pattern, options) => {
   if (typeof pattern !== "string")
     throw new TypeError("Expected a string");
   if (options && options.nobrace === true || !/\{.*\}/.test(pattern)) {
@@ -196,12 +200,18 @@ micromatch.braces = (pattern, options) => {
   }
   return (0, import_braces.default)(pattern, options);
 };
-micromatch.braceExpand = (pattern, options) => {
+micromatch.braces = braces;
+var braceExpand = (pattern, options) => {
   if (typeof pattern !== "string")
     throw new TypeError("Expected a string");
   return micromatch.braces(pattern, __spreadProps(__spreadValues({}, options), { expand: true }));
 };
+micromatch.braceExpand = braceExpand;
 var src_default = micromatch;
 module.exports = __toCommonJS(src_exports);
 // Annotate the CommonJS export names for ESM import in node:
-0 && (module.exports = {});
+0 && (module.exports = {
+  braceExpand,
+  braces,
+  parse
+});

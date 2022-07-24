@@ -20,7 +20,7 @@ var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
 
 // src/index.js
 import util from "util";
-import braces from "braces";
+import bracesFn from "braces";
 import picomatch, { utils } from "picomatch";
 var isEmptyString = (val) => val === "" || val === "./";
 var micromatch = (list, patterns, options) => {
@@ -150,7 +150,7 @@ micromatch.capture = (glob, input, options) => {
 };
 micromatch.makeRe = (...args) => picomatch.makeRe(...args);
 micromatch.scan = (...args) => picomatch.scan(...args);
-micromatch.parse = (patterns, options) => {
+var parse = (patterns, options) => {
   let res = [];
   for (let pattern of [].concat(patterns || [])) {
     for (let str of braces(String(pattern), options)) {
@@ -159,20 +159,26 @@ micromatch.parse = (patterns, options) => {
   }
   return res;
 };
-micromatch.braces = (pattern, options) => {
+micromatch.parse = parse;
+var braces = (pattern, options) => {
   if (typeof pattern !== "string")
     throw new TypeError("Expected a string");
   if (options && options.nobrace === true || !/\{.*\}/.test(pattern)) {
     return [pattern];
   }
-  return braces(pattern, options);
+  return bracesFn(pattern, options);
 };
-micromatch.braceExpand = (pattern, options) => {
+micromatch.braces = braces;
+var braceExpand = (pattern, options) => {
   if (typeof pattern !== "string")
     throw new TypeError("Expected a string");
   return micromatch.braces(pattern, __spreadProps(__spreadValues({}, options), { expand: true }));
 };
+micromatch.braceExpand = braceExpand;
 var src_default = micromatch;
 export {
-  src_default as default
+  braceExpand,
+  braces,
+  src_default as default,
+  parse
 };

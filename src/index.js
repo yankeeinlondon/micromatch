@@ -1,5 +1,5 @@
 import util from 'util';
-import braces from 'braces';
+import bracesFn from 'braces';
 import picomatch, {utils} from 'picomatch';
 
 const isEmptyString = val => val === '' || val === './';
@@ -414,7 +414,7 @@ micromatch.scan = (...args) => picomatch.scan(...args);
  * @api public
  */
 
-micromatch.parse = (patterns, options) => {
+const parse = (patterns, options) => {
   let res = [];
   for (let pattern of [].concat(patterns || [])) {
     for (let str of braces(String(pattern), options)) {
@@ -423,6 +423,8 @@ micromatch.parse = (patterns, options) => {
   }
   return res;
 };
+
+micromatch.parse = parse;
 
 /**
  * Process the given brace `pattern`.
@@ -440,26 +442,25 @@ micromatch.parse = (patterns, options) => {
  * @return {Array}
  * @api public
  */
-
-micromatch.braces = (pattern, options) => {
+const braces = (pattern, options) => {
   if (typeof pattern !== 'string') throw new TypeError('Expected a string');
   if ((options && options.nobrace === true) || !/\{.*\}/.test(pattern)) {
     return [pattern];
   }
-  return braces(pattern, options);
+  return bracesFn(pattern, options);
 };
+
+micromatch.braces = braces;
 
 /**
  * Expand braces
  */
 
-micromatch.braceExpand = (pattern, options) => {
+const braceExpand = (pattern, options) => {
   if (typeof pattern !== 'string') throw new TypeError('Expected a string');
   return micromatch.braces(pattern, { ...options, expand: true });
 };
+micromatch.braceExpand = braceExpand;
 
-/**
- * Expose micromatch
- */
-
-export default micromatch
+export { parse, braces, braceExpand };
+export default micromatch;
